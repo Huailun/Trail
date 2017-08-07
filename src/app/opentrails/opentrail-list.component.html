@@ -1,0 +1,75 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+
+    <!-- Filter the Opentrails   -->
+    <div class='panel-body'>
+        <div class="row">
+            <div class="col-md-2">Filter by:</div>
+            <div class="col-md-4">
+                <input type="text" [(ngModel)]="listFilter" />
+            </div>
+            <div class="col-md-2 label-control">Sort by</div>
+            <div class="col-md-3">
+                <div class="row">
+                    <select class="form-control input-sm" [(ngModel)]="sortBy">
+                            <option ngValue="bicycle">Bicycle</option>
+                            <option ngValue="foot">Foot</option>
+                            <option ngValue="horse">Horse</option>
+                            <option ngValue="wheelchair">Wheelchair</option>
+                            <option ngValue="starRating">Star Rating</option>
+                     </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+
+        <div class='table-responsive'>
+            <!--<table class='table' *ngIf="opentrails && opentrails.length">-->
+            <ng-table class='table' (tableChanged)="onChangeTable(config)" (cellClicked)="onCellClick($event)" [rows]="rows" [columns]="columns">
+                <thead>
+                    <tr>
+                        <!-- <th>
+                        <button class='btn btn-primary' (click)='toggleImage()'>
+                                {{showImage ? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th>-->
+                        <th>No.</th>
+                        <th>Trail Name</th>
+                        <th>Bicycle</th>
+                        <th>Foot</th>
+                        <th>Horse</th>
+                        <th>Wheelchair</th>
+                        <th>5 Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let opentrail of opentrails | opentrailFilter:listFilter | paginate: { itemsPerPage: 8, currentPage: p, totalItems: total}'>
+
+                        <td>{{ opentrail.id}}</td>
+                        <td><a [routerLink]="[opentrail.id]">{{ opentrail.name}}</a></td>
+                        <td>{{ opentrail.bicycle | uppercase}}</td>
+                        <td>{{ opentrail.foot | uppercase }}</td>
+                        <td>{{ opentrail.horse | uppercase }}</td>
+                        <td>{{ opentrail.wheelchair | uppercase }}</td>
+                        <td>
+                            <ai-star [rating]="opentrail.starRating">
+                            </ai-star>
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" [routerLink]="[opentrail.id, 'edit']">
+                                Rate
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </ng-table>
+            <!--</table>-->
+            <div>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>

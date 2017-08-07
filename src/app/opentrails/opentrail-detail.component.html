@@ -1,0 +1,61 @@
+<div class='panel panel-primary' *ngIf='opentrail'>
+    <div class='panel-heading' style='font-size:large'>
+        {{pageTitle + ': ' + opentrail.name}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-4'>
+                <div class='row'>
+                    <div class='col-md-3'>No.</div>
+                    <div class='col-md-6'> {{opentrail.id}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Name:</div>
+                    <div class='col-md-6'>{{opentrail.name}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Bicycle:</div>
+                    <div class='col-md-6'>{{opentrail.bicycle | uppercase}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Foot:</div>
+                    <div class='col-md-6'>{{opentrail.foot | uppercase}}</div>
+                </div>
+
+                <div class='row'>
+                    <div class='col-md-3'>Rating:</div>
+                    <div class='col-md-6'>
+                        <ai-star [rating]='opentrail.starRating' (ratingClicked)='onRatingClicked($event)'>
+                        </ai-star>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Comment:</div>
+                </div>
+                <div><textarea name="textarea" rows="15" cols="35" style="margin-top: 5px;">{{opentrail.comment }}</textarea></div>
+
+            </div>
+
+
+
+            <div class="col-md-8" *ngIf="opentrail.map">
+                <iframe class="center-block img-responsive" [style.width.px]="1000" [style.height.px]="600" [src]="opentrail.map | safe" [title]="opentrail.name" frameborder="0"></iframe>
+            </div>
+
+        </div>
+
+
+
+
+        <div class='panel-footer'>
+
+            <a class='btn btn-default' [routerLink]="['/opentrails']" queryParamsHandling="preserve">
+                <i class='glyphicon glyphicon-chevron-left'>Back</i>
+            </a>
+            <a class='btn btn-default' style='width:80px'>
+                <i class='glyphicon glyphicon-chevron-right'> Next</i>
+            </a>
+            <a class="btn btn-primary" style="width:80px;margin-left:10px" [routerLink]="['edit']">Rate
+        </a>
+        </div>

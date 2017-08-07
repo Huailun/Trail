@@ -1,0 +1,158 @@
+[
+
+    {
+        "id": 1,
+        "name": "Foothills Trail",
+        "bicycle": "yes",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 3.8
+    },
+    {
+        "id": 2,
+        "name": "Michial Emery Trail",
+        "bicycle": "yes",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 3.8
+    },
+    {
+        "id": 3,
+        "name": "Bear Canyon Trail",
+        "bicycle": "yes",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 3.8
+
+    },
+    {
+        "id": 4,
+        "name": "Cottonwood Springs Trail",
+        "bicycle": "no",
+        "foot": "yes",
+        "horse": "no",
+        "wheelchair": "yes",
+        "starRating": 3.8
+
+    },
+    {
+        "id": 5,
+        "name": "Domingo Baca Trail",
+        "bicycle": "no",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 3.8
+
+    },
+    {
+        "id": 6,
+        "name": "Embudito Trail",
+        "bicycle": "no",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 3.8
+
+    },
+    {
+        "id": 7,
+        "name": "Embudo Horse Bypass",
+        "bicycle": "no",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 3.8
+
+    },
+    {
+        "id": 8,
+        "name": "Embudo Trail",
+        "bicycle": "yes",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 2.8
+
+    },
+    {
+        "id": 9,
+        "name": "Hawk Watch Trail",
+        "bicycle": "no",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 4.2
+    },
+    {
+        "id": 10,
+        "name": "Hilldale Trail",
+        "bicycle": "yes",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 4.5
+
+    },
+    {
+        "id": 11,
+        "name": "Menaul Trails",
+        "bicycle": "yes",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 3.1
+    },
+    {
+        "id": 12,
+        "name": "South Lomas Channel",
+        "bicycle": "yes",
+        "foot": "yes",
+        "horse": "yes",
+        "wheelchair": "no",
+        "starRating": 2.5
+
+    },
+    {
+        "id": "13",
+        "name": "Golden",
+        "bicycle": " ",
+        "foot": " ",
+        "horse": " ",
+        "wheelchair": " ",
+        "starRating": "2.5",
+        "tags": [],
+        "map": "",
+        "comment": ""
+    },
+    {
+        "id": "14",
+        "name": "San Antonio",
+        "bicycle": " ",
+        "foot": " ",
+        "horse": " ",
+        "wheelchair": " ",
+        "starRating": 2.5,
+        "tags": [],
+        "map": "",
+        "comment": ""
+
+    },
+    {
+        "id": "15",
+        "bicycle": " ",
+        "foot": " ",
+        "horse": " ",
+        "name": "Juan Tomas",
+        "wheelchair": " ",
+        "starRating": 1.5,
+        "tags": [],
+        "map": "",
+        "comment": ""
+
+    }
+
+]
